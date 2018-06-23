@@ -1,0 +1,24 @@
+.SearchBar {
+    width: 100%;
+    background-color: hsl(220, 21%, 12%);
+    border-radius: 10px;
+}
+
+    .SearchBar-input {
+        display: block;
+        padding: 15px 20px;
+        box-sizing: border-box;
+        width: 100%;
+        appearance: none;
+        -webkit-appearance: none;
+        background: transparent;
+        border: none;
+        color: white;
+        font-family: "Fira Sans Condensed", sans-serif;
+        font-size: 16px;
+        line-height: 1;
+    }
+
+    .SearchBar-input:focus {
+        outline: none;
+    }
