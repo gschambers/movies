@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+      "jsx": "react",
+      "lib": ["dom", "es2015", "es2015.promise"],
+      "listEmittedFiles": true,
+      "module": "commonjs",
+      "pretty": true,
+      "strict": true,
+      "target": "es5",
+      "baseUrl": ".",
+      "paths": {
+        "~modules/*": ["./src/client/modules/*"],
+      },
+      "noUnusedLocals": true,
+      "noUnusedParameters": true
+    },
+
+    "include": [
+      "src/**/*"
+    ]
+  }
