@@ -4,22 +4,34 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "@types/ramda": "^0.25.34",
     "@types/react": "^16.4.1",
     "@types/react-dom": "^16.0.6",
     "@types/react-motion": "^0.0.26",
     "axios": "^0.18.0",
+    "ramda": "^0.25.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-motion": "^0.5.2",
     "rxjs": "^6.2.1"
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^4.0.0-alpha.10",
+    "@storybook/addon-links": "^4.0.0-alpha.10",
+    "@storybook/addons": "^4.0.0-alpha.10",
+    "@storybook/react": "^4.0.0-alpha.10",
     "@types/enzyme": "^3.1.10",
     "@types/jest": "^23.1.1",
     "@types/sinon": "^5.0.1",
+    "@types/storybook__addon-actions": "^3.0.3",
+    "@types/storybook__addon-links": "^3.3.1",
+    "@types/storybook__react": "^3.0.7",
+    "babel-core": "^6.26.3",
+    "babel-runtime": "^6.26.0",
     "css-loader": "^0.28.11",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^23.1.0",
     "sinon": "^6.0.0",
     "style-loader": "^0.21.0",
@@ -35,7 +47,8 @@
     },
     "testRegex": "test\\.tsx?$",
     "moduleNameMapper": {
-      "~modules/(.*)": "<rootDir>/src/modules/$1"
+      "~modules/(.*)": "<rootDir>/src/modules/$1",
+      "\\.css$": "identity-obj-proxy"
     },
     "moduleFileExtensions": [
       "ts",
@@ -45,5 +58,9 @@
       "json",
       "node"
     ]
+  },
+  "scripts": {
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   }
 }
