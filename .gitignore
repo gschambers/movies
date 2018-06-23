@@ -1,0 +1,12 @@
+# DEPENDENCIES
+node_modules
+
+# BUILD
+dist
+
+# LOGGING
+npm-debug.log
+yarn-error.log
+
+# IDE
+.vscode
