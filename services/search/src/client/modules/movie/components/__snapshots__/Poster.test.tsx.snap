@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Poster given a movie as input should render backdrop and title correctly 1`] = `
+<div
+  className="Poster Poster--medium"
+>
+  <div
+    className="Poster-backdrop"
+    style={
+      Object {
+        "backgroundImage": "url(/images/5T8VvuFTdaawKLJk34i69Utaw7o.jpg)",
+      }
+    }
+  />
+  <div
+    className="Poster-strapline"
+  >
+    <div
+      className="Poster-title"
+    >
+      Lost in Translation
+    </div>
+    <div
+      className="Poster-rating"
+    >
+      (
+      7.4
+      )
+    </div>
+  </div>
+</div>
+`;
