@@ -1,0 +1,48 @@
+.Showcase {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    width: 100%;
+}
+
+    .Showcase-nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+        .Showcase-navLeft,
+        .Showcase-navRight {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            background-color: hsl(220, 21%, 12%);
+            cursor: pointer;
+            transition: opacity 100ms linear;
+        }
+
+        .Showcase-navRight {
+            margin-top: 20px;
+        }
+
+        .Showcase-navLeft.is-disabled,
+        .Showcase-navRight.is-disabled {
+            pointer-events: none;
+            opacity: 0.25;
+            cursor: default;
+        }
+
+    .Showcase-posters {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        padding: 40px 0;
+        overflow: hidden;
+    }
+
+        .Showcase-poster {
+            grid-area: 1 / 1;
+            transition: transform 150ms linear;
+        }

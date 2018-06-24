@@ -1,5 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Poster given a movie as input should not render title and rating, if specified 1`] = `
+<div
+  className="Poster Poster--medium"
+>
+  <div
+    className="Poster-backdrop"
+    style={
+      Object {
+        "backgroundImage": "url(/images/5T8VvuFTdaawKLJk34i69Utaw7o.jpg)",
+      }
+    }
+  />
+</div>
+`;
+
 exports[`Poster given a movie as input should render backdrop and title correctly 1`] = `
 <div
   className="Poster Poster--medium"

@@ -20,5 +20,20 @@ describe("Poster", () => {
 
             expect(poster).toMatchSnapshot();
         });
+
+        it("should not render title and rating, if specified", () => {
+            const movie: Movie = {
+                id: 153,
+                title: "Lost in Translation",
+                imageUrl: "/5T8VvuFTdaawKLJk34i69Utaw7o.jpg",
+                rating: 7.4,
+            };
+
+            const poster = renderer
+                .create(<Poster movie={movie} showStrapline={false} />)
+                .toJSON();
+
+            expect(poster).toMatchSnapshot();
+        });
     });
 });
