@@ -76,6 +76,24 @@ describe("Showcase", () => {
             expect(posters).toHaveLength(2);
         });
 
+        it("should focus the last movie on triple right arrow", () => {
+            const showcase = shallow(<Showcase movies={MOVIES} />);
+            const navRight = showcase.find(".Showcase-navRight");
+
+            const nav = [navRight, navRight, navRight];
+
+            for (let elem of nav) {
+                elem.simulate("click");
+            }
+
+            showcase.update();
+
+            const posters = showcase.find(".Showcase-poster");
+
+            expect(posters.last().find(Poster).prop("movie")).toEqual(MOVIES[3]);
+            expect(posters).toHaveLength(1);
+        });
+
         it("should focus the second movie on double right arrow, left arrow and render trailing list", () => {
             const showcase = shallow(<Showcase movies={MOVIES} />);
             const navRight = showcase.find(".Showcase-navRight");

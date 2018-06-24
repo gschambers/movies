@@ -19,7 +19,27 @@ export class Showcase extends React.Component<Props, State> {
         selectedIndex: 0,
     };
 
+    hasNext() {
+        const { movies } = this.props;
+        const { selectedIndex } = this.state;
+        return selectedIndex < movies.length - 1;
+    }
+
+    hasPrev() {
+        const { selectedIndex } = this.state;
+        return selectedIndex > 0;
+    }
+
+    getMoviesFromSelectedIndex() {
+        const [ , trailing ] = splitAt(this.state.selectedIndex, this.props.movies);
+        return reverse(trailing);
+    }
+
     handleMovePrev = () => {
+        if (!this.hasPrev()) {
+            return;
+        }
+
         const { selectedIndex } = this.state;
 
         this.setState({
@@ -28,6 +48,10 @@ export class Showcase extends React.Component<Props, State> {
     };
 
     handleMoveNext = () => {
+        if (!this.hasNext()) {
+            return;
+        }
+
         const { movies } = this.props;
         const { selectedIndex } = this.state;
 
@@ -36,27 +60,18 @@ export class Showcase extends React.Component<Props, State> {
         });
     };
 
-    getMoviesFromSelectedIndex() {
-        const [ , trailing ] = splitAt(this.state.selectedIndex, this.props.movies);
-        return reverse(trailing);
-    }
-
     render() {
-        const { selectedIndex } = this.state;
         let movies = this.getMoviesFromSelectedIndex();
         const length = movies.length;
-
-        const hasNext = selectedIndex < length - 1;
-        const hasPrev = selectedIndex > 0;
 
         return (
             <div className="Showcase">
                 <div className="Showcase-nav">
-                    <div className={`Showcase-navLeft ${!hasPrev && "is-disabled"}`} onClick={this.handleMovePrev}>
+                    <div className={`Showcase-navLeft ${!this.hasPrev() && "is-disabled"}`} onClick={this.handleMovePrev}>
                         <i className="fa fa-arrow-left" />
                     </div>
 
-                    <div className={`Showcase-navRight ${!hasNext && "is-disabled"}`} onClick={this.handleMoveNext}>
+                    <div className={`Showcase-navRight ${!this.hasNext() && "is-disabled"}`} onClick={this.handleMoveNext}>
                         <i className="fa fa-arrow-right" />
                     </div>
                 </div>
