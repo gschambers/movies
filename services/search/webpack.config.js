@@ -7,7 +7,7 @@ module.exports = {
     entry: "./src/client/index.tsx",
 
     output: {
-        filename: "index.js",
+        filename: "client.js",
         path: path.resolve(__dirname, "dist"),
         publicPath: "/",
     },

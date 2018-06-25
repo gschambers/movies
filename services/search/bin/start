@@ -1,0 +1,9 @@
+#!/usr/bin/env node
+
+const express = require("express");
+const path = require("path");
+
+const app = express();
+const { router } = require(path.resolve(__dirname, "../dist/server"));
+app.use(router);
+app.listen(process.env.PORT, process.env.HOST);
