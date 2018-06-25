@@ -7,7 +7,6 @@ RUN yarn install
 
 COPY . ./
 
-RUN yarn jest
 RUN yarn build-server
 RUN yarn build-client
 
