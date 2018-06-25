@@ -4,7 +4,7 @@ import { Movie } from "./types";
 import { MovieDBSearchResponse } from "./api";
 
 export const searchMovies = (query: string): Promise<SearchResult<Movie>> =>
-    axios.get<MovieDBSearchResponse>(`/api/search?query=${query}`)
+    axios.get<MovieDBSearchResponse>(`/api/search/movie?query=${query}`)
         .then((res) => ({
             results: res.data.results.map(
                 (result) => ({

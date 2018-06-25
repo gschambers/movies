@@ -6,13 +6,14 @@ export const router = express.Router();
 
 router.use("/api", proxy({
     target: process.env.API_UPSTREAM,
-    pathRewrite: {
-        "^/api": "",
+    pathRewrite(path): string {
+        return path.replace(/^\/api/, "") + `&api_key=${process.env.API_KEY}`;
     },
 }));
 
 router.use("/images", proxy({
     target: process.env.IMAGES_UPSTREAM,
+    changeOrigin: true,
     pathRewrite: {
         "^/images": "",
     },

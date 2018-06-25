@@ -1,0 +1,9 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    font-family: "Fira Sans Condensed", sans-serif;
+    background-color: hsl(220, 21%, 16%);
+    background-image: linear-gradient(hsl(220, 21%, 24%), hsl(220, 21%, 10%));
+    background-repeat: no-repeat;
+    color: white;
+}

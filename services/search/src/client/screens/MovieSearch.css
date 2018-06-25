@@ -1,0 +1,16 @@
+.MovieSearch {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    height: 100vh;
+    width: 100vw;
+}
+
+    .MovieSearch-searchBar,
+    .MovieSearch-showcase {
+        display: flex;
+        align-items: center;
+    }
+
+    .MovieSearch-searchBar {
+        padding: 0 40px;
+    }

@@ -63,6 +63,7 @@ export class SearchBar extends React.Component<Props, State> {
                     placeholder={this.props.helpText}
                     value={this.state.value}
                     onChange={this.handleChange}
+                    autoFocus={true}
                 />
             </div>
         );

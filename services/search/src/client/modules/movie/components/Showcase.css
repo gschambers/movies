@@ -1,6 +1,7 @@
 .Showcase {
     display: grid;
-    grid-template-columns: 60px 1fr;
+    grid-template-columns: 40px 1fr;
+    height: 100%;
     width: 100%;
 }
 
@@ -38,8 +39,10 @@
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
-        padding: 40px 0;
+        padding-bottom: 40px;
+        padding-left: 40px;
         overflow: hidden;
+        align-self: center;
     }
 
         .Showcase-poster {
