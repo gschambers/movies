@@ -12,6 +12,9 @@ services:
       - IMAGES_UPSTREAM=http://image-proxy:8082
       - API_KEY
       - NODE_ENV
+    depends_on:
+      - api-proxy
+      - image-proxy
 
   api-proxy:
     build: ./services/api-proxy
