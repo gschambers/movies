@@ -1,4 +1,4 @@
-import { reverse, splitAt } from "ramda";
+import { reverse, slice } from "ramda";
 import * as React from "react";
 
 import { Movie } from "../types";
@@ -31,8 +31,8 @@ export class Showcase extends React.Component<Props, State> {
     }
 
     getMoviesFromSelectedIndex() {
-        const [ , trailing ] = splitAt(this.state.selectedIndex, this.props.movies);
-        return reverse(trailing);
+        const { movies } = this.props;
+        return reverse(slice(this.state.selectedIndex, movies.length, movies));
     }
 
     handleMovePrev = () => {
