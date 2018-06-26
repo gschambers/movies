@@ -2,6 +2,8 @@
 
 This project provides a simple UI for searching the MovieDB by movie title.
 
+![Search UI](screenshots/search.png)
+
 ## Quickstart
 
 1. Ensure docker and docker-compose are both installed
